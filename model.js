@@ -1,53 +1,119 @@
-export const CHANNELS=['Shopee','TikTok Shop','Sociolla online','Sociolla cửa hàng','Retailer chọn lọc'];
-export const SKUS=['Hologram','Glitter','Cute Paws','Kitties','Panda'];
-export const SCENARIOS={1:'Thử nhỏ',2:'Mở rộng có điều kiện',3:'Điều kiện đạt đề'};
-export const MIX=[.25,.2,.2,.2,.15];
-export const sum=a=>a.reduce((x,y)=>x+y,0);
-export function round(x){return Math.sign(x)*Math.floor(Math.abs(x)+.50000000001)}
-export function buildModel(data,scenario=2,sim={}){
- const S=data.sheets, g=S.Gia_dinh,k=S.Gia_dinh_kenh;
- const price=sim.price??g.C6-9000,cost=sim.cost??g.C7,cpaFactor=sim.cpa??1,cvrFactor=sim.cvr??1,volume=sim.volume??1,returns=sim.returns??0;
- const monthly=[];
- for(let c=0;c<5;c++)for(let m=0;m<3;m++){
-  const r=7+c*12+m*4+(scenario-1),at=x=>Number(k[x+r]??0),days=[30,31,31][m],online=c<3;
-  const netOrdersInput=at('E')*days,boxesInput=online?round(netOrdersInput*at('F')):round(days*at('G')*at('H'));
-  const baseOrders=online?netOrdersInput:Math.ceil(boxesInput/at('F'));
-  const preOrders=online?baseOrders*volume*cvrFactor:baseOrders*volume;
-  const boxes=online?round(preOrders*at('F')*(1-returns)):round(boxesInput*volume);
-  const orders=online?preOrders*(1-returns):Math.ceil(boxes/at('F'));
-  const preBoxes=online?preOrders*at('F'):boxes;
-  const gsv=boxes*g.C6,sales=boxes*price,discount=gsv-sales,retail=sales*at('P'),revenue=sales-retail;
-  const cogs=boxes*cost,fees=sales*at('J')+preOrders*at('K'),affiliate=sales*at('L')*at('M');
-  const ads=preOrders*at('N')*at('O')*cpaFactor,handling=(returns?preBoxes:boxes)*3000;
-  monthly.push({channel:CHANNELS[c],ci:c,month:m+1,days,boxes,orders,preOrders,gsv,sales,discount,retail,revenue,cogs,fees,affiliate,ads,handling,cm:revenue-cogs-fees-affiliate-ads-handling,basket:at('F'),cvr:at('Q'),sessions:online?preOrders/(at('Q')||1):null,stores:at('G'),velocity:at('H'),feeRate:at('J'),fixedFee:at('K'),affShare:at('L'),affRate:at('M'),paidShare:at('N'),cpa:at('O')*cpaFactor,returnExtra:online?preOrders*returns:0});
+// V3.1: pure calculations from data.json. No workbook drivers or legacy SKU mix.
+export const sum = xs => xs.reduce((a, b) => a + b, 0);
+export const known = v => typeof v === 'number' && Number.isFinite(v);
+const completeSum = (rows, field) => rows.length && rows.every(r => known(r[field])) ? sum(rows.map(r => r[field])) : null;
+export function validateData(data) {
+ if (data.schemaVersion !== '3.1') throw Error('Chỉ hỗ trợ nguồn V3.1; không đọc workbook cũ.');
+ const positiveInt = v => Number.isInteger(v) && v > 0;
+ if (!positiveInt(data.project.targetBoxes)) throw Error('Mục tiêu hộp không hợp lệ.');
+ if (!Array.isArray(data.orders) || !Array.isArray(data.catalog) || !Array.isArray(data.channels)) throw Error('Thiếu bảng đơn, SKU hoặc kênh.');
+ const ids = new Set(), skuIds = new Set(data.catalog.map(s => s.id)), channels = new Set(data.channels.map(c => c.id));
+ for (const o of data.orders) {
+  if (!o.id || ids.has(o.id)) throw Error('Mã đơn thiếu hoặc trùng.');
+  ids.add(o.id);
+  if (!positiveInt(o.boxes) || !known(o.salesVnd) || o.salesVnd < 0) throw Error('Số hộp hoặc tiền hàng không hợp lệ: ' + o.id);
+  if (!['retail','wholesale'].includes(o.type)) throw Error('Loại giao dịch không hợp lệ.');
+  if (o.channel !== null && !channels.has(o.channel)) throw Error('Kênh chưa có trong danh mục.');
+  if (o.skuId !== null && !skuIds.has(o.skuId)) throw Error('SKU chưa có trong danh mục.');
+  for (const f of ['shippingActualVnd','deliveredBoxes','returnedBoxes','cashReceivedVnd']) {
+   if (o[f] !== null && (!known(o[f]) || o[f] < 0)) throw Error('Trường actual phải là số hợp lệ hoặc null: ' + f);
+  }
+  if (known(o.deliveredBoxes) && o.deliveredBoxes > o.boxes) throw Error('Giao vượt số hộp của đơn.');
  }
- const fixed=[1,2,3].map(m=>g[['D','E','F'][m-1]+(scenario===1?40:scenario===2?41:42)]);
- const staff=[1,2,3].map(m=>g[['D','E','F'][m-1]+(scenario===1?45:scenario===2?46:47)]);
- const opening=[5000,12000,20000][scenario-1],ending=[1,2,3].map(m=>g[['D','E','F'][m-1]+(scenario===1?60:scenario===2?61:62)]);
- const delay=[.45,.3,.25][scenario-1],apShare=.3,fund=g.C10;
- const months=[];let cash=fund-opening*cost,prevAR=0,prevAP=0,inventory=opening,cumulative=0;
- for(let m=1;m<=3;m++){
-  const rs=monthly.filter(x=>x.month===m),get=f=>sum(rs.map(x=>x[f]));
-  const o={month:m};for(const f of ['boxes','orders','gsv','sales','discount','retail','revenue','cogs','fees','affiliate','ads','handling','cm','preOrders'])o[f]=get(f);
-  o.fixed=fixed[m-1];o.staff=staff[m-1];o.profit=o.cm-o.fixed-o.staff;o.promo=o.discount+o.retail+o.affiliate+o.ads+o.fixed;
-  o.purchases=Math.max(0,o.boxes+ending[m-1]-inventory);o.actualEnding=inventory+o.purchases-o.boxes;o.purchaseCost=o.purchases*cost;o.receipts=o.revenue*(1-delay)+prevAR;o.payments=o.purchaseCost*(1-apShare)+prevAP;
-  o.opex=o.fees+o.affiliate+o.ads+o.handling+o.fixed+o.staff;o.netCash=o.receipts-o.payments-o.opex;cash+=o.netCash;o.cash=cash;o.ar=o.revenue*delay;o.ap=o.purchaseCost*apShare;o.inventory=o.actualEnding;o.inventoryValue=o.actualEnding*cost;cumulative+=o.profit;o.cumulative=cumulative;
-  o.balance=cash+o.ar+o.inventoryValue-(fund+cumulative+o.ap);prevAR=o.ar;prevAP=o.ap;inventory=o.inventory;months.push(o);
- }
- const total={};for(const f of ['boxes','orders','gsv','sales','discount','retail','revenue','cogs','fees','affiliate','ads','handling','cm','fixed','staff','profit','promo','purchases'])total[f]=sum(months.map(x=>x[f]));
- total.ratio=total.promo/total.gsv;total.margin=total.profit/total.revenue;total.cash=cash;total.gap=g.C8-total.boxes;total.attainment=total.boxes/g.C8;total.breakEven=total.cm>0?Math.ceil((total.fixed+total.staff)/(total.cm/total.boxes)):null;
- const daily=[];
- for(let m=1;m<=3;m++){
-  const ws=data.weights.filter(x=>x.month===m),wtotal=sum(ws.map(x=>x.weight)),mb=months[m-1].boxes;let cum=0,prior=0;
-  for(const w of ws){cum+=w.weight;const next=round(cum/wtotal*mb),boxes=next-prior;prior=next;const frac=mb?boxes/mb:0;daily.push({date:w.date,month:m,week:Math.floor((daily.length)/7)+1,boxes,weight:w.weight,frac,ads:months[m-1].ads*w.weight/wtotal});}
- }
- return {scenario,monthly,months,total,daily,opening,ending,price,cost,fund,fixed,staff,delay};
+ if (sum(data.receipts.map(r => r.boxes)) !== data.project.targetBoxes) throw Error('Tổng ba đợt phải khớp mục tiêu nhập.');
+ if (data.costs.shippingScenariosVnd.some(v => !known(v) || v < 0)) throw Error('Kịch bản vận chuyển không hợp lệ.');
+ return data;
 }
-export function filtered(model,channel='all',period='all'){
- const rows=model.monthly.filter(x=>(channel==='all'||x.channel===channel)&&(period==='all'||x.month===Number(period)));
- const total={};for(const f of ['boxes','orders','gsv','sales','discount','retail','revenue','cogs','fees','affiliate','ads','handling','cm'])total[f]=sum(rows.map(x=>x[f]));
- const ms=model.months.filter(x=>period==='all'||x.month===Number(period));total.profit=channel==='all'?sum(ms.map(x=>x.profit)):null;total.fixed=channel==='all'?sum(ms.map(x=>x.fixed)):null;
- return {rows,total,months:ms};
+export function selectOrders(data, filters = {}) {
+ const verified = data.orders.filter(o => o.verification === 'confirmed');
+ const {channel='all', type='all', sku='all', phase='all'} = filters;
+ const pre = verified.filter(o => (type === 'all' || o.type === type) && (phase === 'all' || o.salesPhase === phase));
+ const rows = pre.filter(o => (channel === 'all' || (channel === 'unassigned' ? o.channel === null : o.channel === channel)) && (sku === 'all' || o.skuId === sku));
+ const unresolved = pre.filter(o => (channel !== 'all' && channel !== 'unassigned' && o.channel === null) || (sku !== 'all' && o.skuId === null));
+ return {rows, unresolved, incomplete:unresolved.length > 0, noAttributedData:rows.length === 0 && unresolved.length > 0};
 }
-export function skuBoxes(total){let acc=0;return SKUS.map((sku,i)=>{const boxes=i===4?total-acc:round(total*MIX[i]);acc+=boxes;return {sku,boxes,mix:MIX[i]}})}
-export function cohorts(model){return [0,1].flatMap(c=>{const x=model.monthly.find(r=>r.ci===c),retention=1-x.returnExtra/Math.max(1,x.preOrders),revenue=model.price*x.basket*retention,cost=x.basket*model.cost*retention,fee=revenue*x.feeRate+x.fixedFee,handling=x.basket*3000,pre=revenue-cost-fee-handling;return [{channel:x.channel,group:'Không quảng cáo · không tiếp thị liên kết',cm:pre,ceiling:pre},{channel:x.channel,group:'Chỉ quảng cáo',cm:pre-x.cpa,ceiling:pre},{channel:x.channel,group:'Chỉ tiếp thị liên kết',cm:pre-revenue*x.affRate,ceiling:pre-revenue*x.affRate},{channel:x.channel,group:'Quảng cáo + tiếp thị liên kết',cm:pre-revenue*x.affRate-x.cpa,ceiling:pre-revenue*x.affRate}]})}
+export function summarize(data, filters = {}) {
+ const scope = selectOrders(data, filters), rows = scope.rows;
+ const boxes = scope.noAttributedData ? null : sum(rows.map(o => o.boxes));
+ const salesVnd = scope.noAttributedData ? null : sum(rows.map(o => o.salesVnd));
+ const orderCount = scope.noAttributedData ? null : rows.length;
+ return {...scope, boxes, salesVnd, orderCount,
+  aovVnd:orderCount ? salesVnd / orderCount : null,
+  aspVnd:known(boxes) && boxes > 0 ? salesVnd / boxes : null,
+  progress:known(boxes) ? boxes / data.project.targetBoxes : null,
+  remainingBoxes:known(boxes) ? Math.max(0, data.project.targetBoxes - boxes) : null,
+  shippingActualVnd:completeSum(rows,'shippingActualVnd'),
+  cashReceivedVnd:completeSum(rows,'cashReceivedVnd'),
+  deliveredBoxes:completeSum(rows,'deliveredBoxes'),
+  profitVnd:null // Ownership, COGS and complete expenses are not established.
+ };
+}
+export function channelTotals(data) {
+ const verified = data.orders.filter(o => o.verification === 'confirmed');
+ return [...data.channels, {id:'unassigned',name:'Chưa phân kênh'}].map(c => {
+  const rows = verified.filter(o => c.id === 'unassigned' ? o.channel === null : o.channel === c.id);
+  const incomplete = c.id !== 'unassigned' && verified.some(o => o.channel === null);
+  return {...c, orders:rows.length || (incomplete ? null : 0), boxes:rows.length ? sum(rows.map(o => o.boxes)) : (incomplete ? null : 0), salesVnd:rows.length ? sum(rows.map(o => o.salesVnd)) : (incomplete ? null : 0), incomplete};
+ });
+}
+export function priceForOrder(data, type, boxes) {
+ if (!Number.isInteger(boxes) || boxes <= 0) return null;
+ if (type === 'retail_regular') return data.prices.retailRegularVnd;
+ if (type === 'retail_discount') return data.prices.retailDiscountVnd;
+ if (type !== 'wholesale') return null;
+ const tier = [...data.prices.wholesaleTiers].sort((a,b) => b.minBoxes-a.minBoxes).find(t => boxes >= t.minBoxes);
+ return tier?.priceVnd ?? null;
+}
+export function shippingScenarios(data, filters = {}) {
+ const s = summarize(data, filters);
+ return data.costs.shippingScenariosVnd.map(fee => ({fee, orders:s.orderCount,
+  shippingVnd:known(s.orderCount) ? s.orderCount * fee : null,
+  salesLessShippingVnd:known(s.salesVnd) && known(s.orderCount) ? s.salesVnd-s.orderCount*fee : null,
+  actualShippingVnd:s.shippingActualVnd, basis:'ASSUMPTION_PER_ORDER_NOT_ACTUAL'}));
+}
+export function estimateCommission(data, revenue, mode) {
+ if (!known(revenue) || revenue < data.commission.minimumKnownRevenueVnd) return null;
+ if (mode === 'whole') {
+  const band=data.commission.bands.find(b => b.upperInclusiveVnd === null || revenue <= b.upperInclusiveVnd);
+  return revenue*band.rate;
+ }
+ if (mode === 'marginal') {
+  let result=0, prior=0;
+  for (const b of data.commission.bands) {
+   const top=b.upperInclusiveVnd ?? revenue;
+   result += Math.max(0,Math.min(revenue,top)-prior)*b.rate;
+   prior=top; if (revenue <= top) break;
+  }
+  return result;
+ }
+ return null;
+}
+export function inventorySummary(data) {
+ return {plannedReceipts:sum(data.receipts.map(r => r.boxes)), receivedBoxes:sum(data.receipts.filter(r => r.status === 'received').map(r => r.boxes)),
+  futureReceipts:sum(data.receipts.filter(r => r.status === 'planned').map(r => r.boxes)),
+  committedBoxes:summarize(data).boxes, physicalOnHandBoxes:data.inventory.physicalOnHandBoxes,
+  availableToPromiseBoxes:data.inventory.availableToPromiseBoxes, skuStock:data.inventory.skuStock};
+}
+export function forecastSummary(data) {
+ const f=data.forecast, actual=summarize(data);
+ return {status:f.status, futureBoxes:f.futureBoxes, futureSalesVnd:f.futureSalesVnd,
+  projectedBoxes:known(f.futureBoxes) ? actual.boxes+f.futureBoxes : null,
+  projectedSalesVnd:known(f.futureSalesVnd) ? actual.salesVnd+f.futureSalesVnd : null,
+  asOf:f.asOf, evidence:f.evidence};
+}
+export function simulateOrders(data, assumptions) {
+ const {type, boxesPerOrder, orders, shippingPerOrder} = assumptions;
+ const price=priceForOrder(data,type,boxesPerOrder);
+ if (!known(price) || !Number.isInteger(orders) || orders <= 0 || !known(shippingPerOrder) || shippingPerOrder < 0) return null;
+ const boxes=boxesPerOrder*orders, salesVnd=boxes*price, shippingVnd=orders*shippingPerOrder;
+ const actual=summarize(data);
+ return {price,boxes,orders,salesVnd,shippingVnd,salesLessShippingVnd:salesVnd-shippingVnd,
+  projectedBoxes:actual.boxes+boxes,projectedSalesVnd:actual.salesVnd+salesVnd,
+  exceedsTarget:actual.boxes+boxes>data.project.targetBoxes, profitVnd:null,basis:'SIMULATION_NOT_ACTUAL_OR_APPROVED_FORECAST'};
+}
+export function actualCSV(data, filters = {}) {
+ const rows=selectOrders(data,filters).rows;
+ const fields=['id','verification','type','offer','boxes','salesVnd','channel','skuId','orderedDate','shippingActualVnd','deliveredBoxes','cashReceivedVnd'];
+ const quote = v => {let s=v===null||v===undefined?'':String(v);if(/^[=+@-]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"'};
+ return '\uFEFF'+[fields,...rows.map(o => fields.map(f => o[f]))].map(r => r.map(quote).join(',')).join('\r\n');
+}
