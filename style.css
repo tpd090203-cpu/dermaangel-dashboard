@@ -9,3 +9,5 @@ body{background:var(--bg);color:var(--ink)}header{background:var(--surface);heig
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(max-width:640px){.header-right{gap:7px}.theme-picker>button{font-size:9px;padding:6px 8px}.theme-panel{right:-70px;width:min(320px,92vw);padding:16px}.chart-controls{flex-wrap:wrap;gap:7px}.chart-controls>span{font-size:8px}.sidebar .brandmark{width:32px;height:35px}.plan-toolbar small{line-height:1.8}}
 
 .axis{fill:#73816b}.svg-label{fill:#697b66}.chart-controls>span{color:#7c8b75}.kpi .sub,.panel-head p,.page-heading p{color:#798471}.donut-legend small{color:#7c8974}
+
+.donut-legend .legend-filter{width:100%;display:flex;align-items:center;gap:10px;padding:15px 8px;background:transparent;border:0;border-bottom:1px solid #e7eadd;border-radius:5px;text-align:left;font-size:11px}.legend-filter span{flex:1}.legend-filter small{display:block}.donut-legend .legend-filter:hover,.donut-legend .legend-filter[aria-pressed=true]{background:#edf1e6}.legend-filter i{display:block;width:10px;height:10px;border-radius:2px;flex-shrink:0}
