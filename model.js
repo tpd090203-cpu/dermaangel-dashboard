@@ -20,7 +20,8 @@ export function validateData(data) {
   }
   if (known(o.deliveredBoxes) && o.deliveredBoxes > o.boxes) throw Error('Giao vượt số hộp của đơn.');
  }
- if (sum(data.receipts.map(r => r.boxes)) !== data.project.targetBoxes) throw Error('Tổng ba đợt phải khớp mục tiêu nhập.');
+ if (sum(data.receipts.map(r => r.boxes)) !== data.project.targetBoxes) throw Error('Tổng lượng nhập phải khớp mục tiêu chiến dịch.');
+ for(const r of data.receipts){if(r.skuQuantities && sum(Object.values(r.skuQuantities))!==r.boxes)throw Error('Cơ cấu SKU không khớp đợt '+r.id);}
  if (data.costs.shippingScenariosVnd.some(v => !known(v) || v < 0)) throw Error('Kịch bản vận chuyển không hợp lệ.');
  return data;
 }

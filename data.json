@@ -3,7 +3,7 @@
   "project": {
     "name": "DermaAngel",
     "team": "DNT",
-    "planVersion": "V3.1",
+    "planVersion": "V3.2",
     "theme": "Social Commerce",
     "keyMessage": "Dán điểm xinh, tự tin thể hiện.",
     "salesStart": "2026-11-01",
@@ -14,14 +14,15 @@
     "timezone": "Asia/Ho_Chi_Minh",
     "targetBoxes": 500,
     "targetRevenueVnd": null,
-    "standardRevenueVnd": null
+    "standardRevenueVnd": null,
+    "planDeadline": "2026-11-09T23:59:00+07:00"
   },
   "provenance": {
     "updated": "2026-11-06",
     "authority": "Số liệu tổng hợp do đội DNT xác minh",
     "actualEvidence": "So don tong hop da xac minh",
     "receiptEvidence": "Cap nhat dot hang cua doi DNT",
-    "actualScope": "Số đơn, hộp đặt xác nhận và tiền hàng; không tự suy giao thành công, tiền thu, kênh hoặc SKU.",
+    "actualScope": "Số đơn, sản lượng đặt và doanh thu được đội xác nhận; giao hàng và thanh toán chờ đối soát.",
     "legacyExcluded": true,
     "audience": "public_read_only"
   },
@@ -39,27 +40,28 @@
     {
       "id": "cute-paws",
       "name": "Cute Paws",
-      "piecesPerBox": null
+      "piecesPerBox": 15
     },
     {
       "id": "kitties",
       "name": "Kitties",
-      "piecesPerBox": null
+      "piecesPerBox": 15
     },
     {
       "id": "perfect-coverage",
-      "name": "Perfect Coverage",
-      "piecesPerBox": 15
+      "name": "Perfect Coverage / Holo",
+      "piecesPerBox": 15,
+      "aliasNote": "Holo được tạm đối chiếu với Perfect Coverage theo trao đổi của đội; cần kiểm tên trên bao bì."
     },
     {
       "id": "panda",
       "name": "Panda",
-      "piecesPerBox": null
+      "piecesPerBox": 15
     },
     {
       "id": "glitter",
       "name": "Glitter",
-      "piecesPerBox": null
+      "piecesPerBox": 15
     }
   ],
   "demandNotes": {
@@ -122,23 +124,27 @@
       "status": "received",
       "receivedDate": "2026-11-04",
       "preorderedBoxes": 100,
-      "skuQuantities": null
+      "skuQuantities": {
+        "cute-paws": 24,
+        "kitties": 24,
+        "perfect-coverage": 4,
+        "panda": 24,
+        "glitter": 24
+      }
     },
     {
       "id": "B2",
-      "boxes": 200,
+      "boxes": 400,
       "status": "planned",
-      "receivedDate": null,
+      "receivedDate": "2026-11-11",
       "preorderedBoxes": null,
-      "skuQuantities": null
-    },
-    {
-      "id": "B3",
-      "boxes": 200,
-      "status": "planned",
-      "receivedDate": null,
-      "preorderedBoxes": null,
-      "skuQuantities": null
+      "skuQuantities": {
+        "cute-paws": 100,
+        "kitties": 100,
+        "perfect-coverage": 100,
+        "panda": 70,
+        "glitter": 30
+      }
     }
   ],
   "inventory": {
@@ -213,11 +219,2436 @@
     }
   ],
   "forecast": {
-    "status": "not_provided",
-    "asOf": null,
-    "futureBoxes": null,
-    "futureSalesVnd": null,
-    "evidence": null
+    "status": "scenario_model",
+    "asOf": "2026-11-06",
+    "defaultScenario": "base",
+    "futureBoxes": 360,
+    "futureSalesVnd": 19722000,
+    "evidence": "Mô hình kế hoạch bottom-up; tỷ lệ chốt và cơ cấu đơn là giả định cần kiểm chứng trước khi khóa baseline 09/11.",
+    "confidence": "Chưa hiệu chuẩn bằng dữ liệu khách tiềm năng",
+    "scenarios": [
+      {
+        "id": "conservative",
+        "label": "Thận trọng · 400 hộp",
+        "lines": [
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-26",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-28",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          }
+        ],
+        "skuAllocation": {
+          "cute-paws": 65,
+          "kitties": 65,
+          "perfect-coverage": 90,
+          "panda": 50,
+          "glitter": 30
+        },
+        "b2BoxesSold": 300,
+        "newOrders": 66,
+        "futureSalesVnd": 16404000
+      },
+      {
+        "id": "base",
+        "label": "Cơ sở · 460 hộp",
+        "lines": [
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-26",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-26",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-28",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-28",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-30",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-30",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          }
+        ],
+        "skuAllocation": {
+          "cute-paws": 84,
+          "kitties": 84,
+          "perfect-coverage": 100,
+          "panda": 62,
+          "glitter": 30
+        },
+        "b2BoxesSold": 360,
+        "newOrders": 82,
+        "futureSalesVnd": 19722000
+      },
+      {
+        "id": "goal",
+        "label": "Đạt mục tiêu · 500 hộp",
+        "lines": [
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-11",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-12",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-14",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-16",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-18",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-20",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-22",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-23",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "wholesale",
+            "orders": 1,
+            "boxes": 30,
+            "priceVnd": 52000,
+            "salesVnd": 1560000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-24",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 57000,
+            "salesVnd": 114000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-26",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-26",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-28",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-28",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-30",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-30",
+            "channel": "offline",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          },
+          {
+            "date": "2026-11-30",
+            "channel": "online",
+            "type": "retail",
+            "orders": 1,
+            "boxes": 2,
+            "priceVnd": 63000,
+            "salesVnd": 126000,
+            "basis": "forecast"
+          }
+        ],
+        "skuAllocation": {
+          "cute-paws": 100,
+          "kitties": 100,
+          "perfect-coverage": 100,
+          "panda": 70,
+          "glitter": 30
+        },
+        "b2BoxesSold": 400,
+        "newOrders": 88,
+        "futureSalesVnd": 21876000
+      }
+    ],
+    "assumptions": {
+      "wholesaleBoxesPerOrder": 30,
+      "retailBoxesPerOrder": 2,
+      "defaultShippingVnd": 15000,
+      "wholesaleConversion": 0.2,
+      "retailConversion": 0.25,
+      "printingPackagingBudgetVnd": 200000,
+      "contingencyRate": 0.1,
+      "paidAdsVnd": 0,
+      "paidKocVnd": 0,
+      "sampleUnits": 0
+    },
+    "method": "Sỉ: số đối tác cần tiếp cận × tỷ lệ chốt 20% × 30 hộp. Lẻ: lượt tư vấn đủ nhu cầu × tỷ lệ chốt 25% × 2 hộp. Lịch sale phân bổ năng lực bán, không phải hệ số tăng trưởng đã kiểm chứng."
   },
   "commission": {
     "minimumKnownRevenueVnd": 1000000,
@@ -261,6 +2692,116 @@
       "weight": 0.25,
       "title": "Độ chính xác dự báo và triển khai",
       "missing": "Baseline, actual cùng kỳ và công thức BTC"
+    }
+  ],
+  "events": [
+    {
+      "id": "submission",
+      "name": "Nộp kế hoạch Vòng 3",
+      "start": "2026-11-09",
+      "end": "2026-11-09",
+      "kind": "deadline",
+      "basis": "BTC · theo thông tin đội cung cấp"
+    },
+    {
+      "id": "sale1",
+      "name": "Đợt 1 · Lễ tốt nghiệp UFM & 11.11",
+      "start": "2026-11-11",
+      "end": "2026-11-12",
+      "kind": "sale",
+      "basis": "Lịch sự kiện theo đội cung cấp; quyền bán tại trường chưa xác nhận"
+    },
+    {
+      "id": "sale2",
+      "name": "Đợt 2 · Ngày Nhà giáo Việt Nam",
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "kind": "sale",
+      "basis": "Lịch triển khai của đội"
+    },
+    {
+      "id": "sale3",
+      "name": "Đợt 3 · Ngày Văn hóa Việt Nam",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "kind": "sale",
+      "basis": "Ngày Văn hóa Việt Nam · Chính phủ"
+    },
+    {
+      "id": "journal",
+      "name": "Chốt nhật ký · trước 16:00",
+      "start": "2026-11-30",
+      "end": "2026-11-30",
+      "kind": "deadline",
+      "basis": "BTC · theo thông tin đội cung cấp"
+    }
+  ],
+  "execution": [
+    {
+      "period": "06–08/11",
+      "task": "Rà soát đối tác; chốt nguồn hàng 11/11; thu nhu cầu theo mẫu",
+      "owner": "Sales + Vận hành",
+      "kpi": "Cơ sở: tiếp cận 35 đối tác sỉ và tạo 300 lượt tư vấn lẻ đủ nhu cầu trong kỳ; chưa phải số thực tế",
+      "trigger": "Thiếu danh sách đầu mối: hạ dự báo về kịch bản thận trọng"
+    },
+    {
+      "period": "09/11",
+      "task": "Nộp kế hoạch và chốt baseline doanh thu, sản lượng, hoạt động",
+      "owner": "Trưởng nhóm",
+      "kpi": "Nộp trước 23:59; lưu bản kế hoạch gốc và lịch sử điều chỉnh",
+      "trigger": "Không ghi đè baseline sau khi nộp"
+    },
+    {
+      "period": "10/11",
+      "task": "Xác nhận hàng, gom preorder và phân công giao nhận",
+      "owner": "Vận hành + Sales",
+      "kpi": "Đợt B2: 400 hộp; đủ cơ cấu 100/100/100/70/30",
+      "trigger": "Hàng chưa sẵn sáng 11/11: chuyển sang nhận đơn hẹn giao, không báo có hàng"
+    },
+    {
+      "period": "11–12/11",
+      "task": "Nhận hàng trước ca bán; triển khai đợt 1 và chốt đơn sỉ",
+      "owner": "Sales trực tiếp + Nội dung",
+      "kpi": "Cơ sở: 180 hộp mới / 34 đơn dự báo",
+      "trigger": "Đến hết 12/11 dưới 140 hộp mới: chuyển kịch bản thận trọng, bổ sung tiếp cận sỉ"
+    },
+    {
+      "period": "13–19/11",
+      "task": "Chăm sóc khách đã hỏi; đối soát giao hàng; chuẩn bị đợt 2",
+      "owner": "Sales + Vận hành",
+      "kpi": "Cơ sở: thêm 18 hộp / 9 đơn; thu thập số bán theo SKU",
+      "trigger": "Glitter gần hết: tư vấn mẫu thay thế có đồng thuận, không tự đổi SKU"
+    },
+    {
+      "period": "20/11",
+      "task": "Đợt bán 2 · nhu cầu chụp ảnh, văn nghệ và hoạt động tại trường",
+      "owner": "Sales + Nội dung",
+      "kpi": "Cơ sở: 84 hộp / 14 đơn dự báo",
+      "trigger": "Giữa kỳ lệch >20% doanh thu baseline: ghi lý do và điều chỉnh forecast"
+    },
+    {
+      "period": "21–24/11",
+      "task": "Gom đơn và triển khai đợt 3 · Ngày Văn hóa Việt Nam",
+      "owner": "Sales + Vận hành",
+      "kpi": "Cơ sở 24/11: 54 hộp / 13 đơn; đảm bảo tồn trước nhận đơn",
+      "trigger": "Không tự mở thêm kênh/giảm giá ngoài baseline mà không ghi nhận thay đổi"
+    },
+    {
+      "period": "25–30/11",
+      "task": "Chốt khách còn lại, đối soát tiền hàng, vận chuyển và nhật ký",
+      "owner": "Tài chính + Trưởng nhóm",
+      "kpi": "Cơ sở: thêm 12 hộp; nộp nhật ký trước 16:00 ngày 30/11",
+      "trigger": "Mốc 30/11 chỉ tính đơn được BTC công nhận; không mặc định đơn cuối ngày đủ điều kiện"
+    }
+  ],
+  "externalSources": [
+    {
+      "title": "Ngày Văn hóa Việt Nam 24/11",
+      "url": "https://xaydungchinhsach.chinhphu.vn/ngay-24-11-hang-nam-la-ngay-van-hoa-viet-nam-nguoi-lao-dong-duoc-nghi-huong-nguyen-luong-119260113152642414.htm"
+    },
+    {
+      "title": "Thông báo lễ tốt nghiệp UFM đợt 2/2026; ngày 11–12/11 theo đội cung cấp",
+      "url": "https://pdt.ufm.edu.vn/XemChiTietTinTucUIS.aspx?id=rrfIFIPyynQI46Aw-ENJYg"
     }
   ]
 }
