@@ -83,3 +83,12 @@ tbody tr:hover{background:var(--theme-soft)}
  outline:2px solid var(--nav-active);outline-offset:3px;
 }
 @media(prefers-reduced-motion:reduce){:root{transition:none}}
+
+/* Keep chart legends and painted series in the same ombre family. */
+:root{--chart-secondary:#4d8da1;--chart-tertiary:#b7a18a;--chart-quaternary:#8f837f}
+.chart-ombre-area{pointer-events:none}
+.donut-legend .legend-filter i,.chart-legend i{
+ background-image:linear-gradient(135deg,#ffffff65 0%,#ffffff00 55%,#00000016 100%)!important;
+}
+.chart svg stop,.gantt-scroll svg stop{transition:stop-color .48s ease}
+@media(prefers-reduced-motion:reduce){.chart svg stop,.gantt-scroll svg stop{transition:none}}

@@ -31,7 +31,10 @@ export function applyTheme(id){
   '--theme-wash':mixColor(t.color,'#f5f3ef',.85),
   '--theme-line':mixColor(t.color,'#e8e7e2',.75),
   '--theme-text':mixColor(t.ink,'#28343b',.40),
-  '--theme-muted':mixColor(t.ink,'#747c7e',.70)
+  '--theme-muted':mixColor(t.ink,'#747c7e',.70),
+  '--chart-secondary':mixColor(t.color,'#5c98bd',.58),
+  '--chart-tertiary':mixColor(t.color,'#e8ae86',.72),
+  '--chart-quaternary':mixColor(t.color,'#b78588',.68)
  };
  Object.entries(tokens).forEach(([name,value])=>root.style.setProperty(name,value));
  root.dataset.theme=t.id;
@@ -51,7 +54,53 @@ export function initDisplay(){
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!document.querySelector('#chartInspector').hidden)closeInspector();themePanel.hidden=true;document.querySelector('#tooltip').hidden=true}});
  const pane=document.querySelector('#chartInspector');pane.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const els=[...pane.querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(el=>!el.hidden);if(e.shiftKey&&document.activeElement===els[0]){e.preventDefault();els.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===els.at(-1)){e.preventDefault();els[0].focus()}});
 }
+let gradientSequence=0;
+export function applyChartOmbre(){
+ const ns='http://www.w3.org/2000/svg';
+ document.querySelectorAll('#content svg').forEach(svg=>{
+  if(svg.querySelector('[data-chart-ombre]'))return;
+  const defs=document.createElementNS(ns,'defs');defs.dataset.chartOmbre='true';
+  svg.prepend(defs);
+  const horizontal=!!svg.closest('.horizontal,.gantt-scroll'),gradients=new Map();
+  const gradient=(paint,kind)=>{
+   const key=kind+paint;if(gradients.has(key))return gradients.get(key);
+   const id='dnt-ombre-'+(++gradientSequence),g=document.createElementNS(ns,'linearGradient');
+   g.id=id;
+   if(kind==='stroke'){
+    const box=svg.viewBox.baseVal;g.setAttribute('gradientUnits','userSpaceOnUse');
+    g.setAttribute('x1',String(box.x));g.setAttribute('x2',String(box.x+box.width));
+    g.setAttribute('y1',String(box.y));g.setAttribute('y2',String(box.y+box.height));
+   }else{
+    g.setAttribute('x1','0%');g.setAttribute('y1','0%');
+    g.setAttribute('x2',horizontal?'100%':'15%');g.setAttribute('y2',horizontal?'15%':'100%');
+   }
+   const stops=kind==='area'
+    ?[['0%',paint,'.26'],['100%',paint,'0']]
+    :[['0%',`color-mix(in srgb, ${paint} 62%, white)`,'1'],['48%',paint,'1'],['100%',`color-mix(in srgb, ${paint} 84%, var(--accent-ink))`,'1']];
+   stops.forEach(([offset,color,opacity])=>{const stop=document.createElementNS(ns,'stop');stop.setAttribute('offset',offset);stop.style.stopColor=color;stop.setAttribute('stop-opacity',opacity);g.append(stop)});
+   defs.append(g);const url=`url(#${id})`;gradients.set(key,url);return url;
+  };
+  const paintable=paint=>paint&&!/^(none|transparent|white|#fff(?:fff)?|url\()/i.test(paint)&&paint!=='var(--plot-bg)'&&paint!=='var(--acacia-ink)';
+  svg.querySelectorAll('rect,circle,polyline,path,polygon').forEach(shape=>{
+   for(const attr of ['fill','stroke']){
+    const paint=shape.getAttribute(attr);
+    if(paintable(paint))shape.setAttribute(attr,gradient(paint,shape.tagName.toLowerCase()==='polygon'?'area':attr));
+   }
+  });
+  const line=svg.querySelector('.chart-line');
+  if(line){
+   const points=line.getAttribute('points').trim().split(/\s+/).map(p=>p.split(',').map(Number));
+   if(points.length>1&&points.every(p=>p.length===2&&p.every(Number.isFinite))){
+    const area=document.createElementNS(ns,'polygon'),baseline=svg.viewBox.baseVal.height-56;
+    area.setAttribute('points',`${points[0][0]},${baseline} ${line.getAttribute('points')} ${points.at(-1)[0]},${baseline}`);
+    area.setAttribute('fill',gradient('var(--accent)','area'));area.setAttribute('class','chart-ombre-area');
+    area.setAttribute('aria-hidden','true');line.before(area);
+   }
+  }
+ });
+}
 export function enhanceCharts(onAction){
+ applyChartOmbre();
  const tip=document.querySelector('#tooltip');tip.hidden=true;document.querySelectorAll('#content svg').forEach(svg=>svg.setAttribute('role','group'));
  document.querySelectorAll('#content svg rect,#content svg circle,#content svg polyline').forEach(el=>{
   const title=el.querySelector('title');const label=el.dataset.tip||title?.textContent;if(!label)return;

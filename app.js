@@ -1,4 +1,4 @@
-import {initDisplay,enhanceCharts,showInspector,closeInspector} from './interactions.js?v=20261106-ombre4';
+import {initDisplay,enhanceCharts,showInspector,closeInspector} from './interactions.js?v=20261107-chartombre5';
 import {planSummary} from './forecast-model.js';
 import {validateData,summarize,selectOrders,channelTotals,priceForOrder,shippingScenarios,estimateCommission,inventorySummary,forecastSummary,simulateOrders,actualCSV,known} from './model.js';
 const $=s=>document.querySelector(s), nf=new Intl.NumberFormat('vi-VN',{maximumFractionDigits:0});
@@ -19,7 +19,7 @@ const card=(label,value,sub,status='actual',test='')=>`<div class="kpi" ${test?`
 const table=(heads,rows)=>`<div class="tablewrap"><table><thead><tr>${heads.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const noData=t=>`<div class="empty"><strong>Chưa có dữ liệu</strong><p>${esc(t)}</p></div>`;
 const scopeNote=()=>`<div class="scope-note">Phạm vi phân tích: đơn hàng theo bộ lọc. Mục tiêu và kế hoạch hàng hóa: toàn chiến dịch.</div>`;
-const palette=['var(--accent)','var(--marina)','var(--muskmelon)','var(--dusty-rose)'];
+const palette=['var(--accent)','var(--chart-secondary)','var(--chart-tertiary)','var(--chart-quaternary)'];
 function bars(items,unit='hộp') {
  const valid=items.filter(i=>known(i.value));if(!valid.length)return noData('Chưa có số liệu trong phạm vi đã chọn.');
  const max=Math.max(1,...valid.map(i=>i.value)),h=60+valid.length*55;
