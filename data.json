@@ -89,7 +89,9 @@
         "priceVnd": 49000
       }
     ],
-    "comboScope": "Giá Combo 2 và Combo 5 thuộc đơn actual; không tự áp cho đơn mới."
+    "comboScope": "Giá Combo 2 và Combo 5 thuộc đơn actual; không tự áp cho đơn mới.",
+    "combo2Vnd": 111000,
+    "combo5Vnd": 268000
   },
   "costs": {
     "shippingScenariosVnd": [
@@ -223,7 +225,7 @@
     "asOf": "2026-11-06",
     "defaultScenario": "base",
     "futureBoxes": 360,
-    "futureSalesVnd": 19722000,
+    "futureSalesVnd": 19560000,
     "evidence": "Mô hình kế hoạch bottom-up; tỷ lệ chốt và cơ cấu đơn là giả định cần kiểm chứng trước khi khóa baseline 09/11.",
     "confidence": "Chưa hiệu chuẩn bằng dữ liệu khách tiềm năng",
     "scenarios": [
@@ -247,9 +249,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -257,9 +260,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -267,9 +271,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -277,9 +282,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -287,9 +293,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -297,9 +304,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -307,9 +315,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -317,9 +326,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -327,9 +337,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -337,9 +348,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -347,9 +359,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -357,9 +370,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -377,9 +391,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -387,9 +402,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -397,9 +413,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -407,9 +424,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -417,9 +435,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -427,9 +446,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -437,9 +457,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -447,9 +468,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -457,9 +479,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -467,9 +490,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -477,9 +501,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -487,9 +512,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-14",
@@ -607,9 +633,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -617,9 +644,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -627,9 +655,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -637,9 +666,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -647,9 +677,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -657,9 +688,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -667,9 +699,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -677,9 +710,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -687,9 +721,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -697,9 +732,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-22",
@@ -787,9 +823,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -797,9 +834,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -807,9 +845,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -817,9 +856,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -827,9 +867,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -837,9 +878,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -847,9 +889,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -857,9 +900,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -867,9 +911,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-26",
@@ -901,7 +946,7 @@
         },
         "b2BoxesSold": 300,
         "newOrders": 66,
-        "futureSalesVnd": 16404000
+        "futureSalesVnd": 16275000
       },
       {
         "id": "base",
@@ -933,9 +978,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -943,9 +989,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -953,9 +1000,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -963,9 +1011,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -973,9 +1022,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -983,9 +1033,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -993,9 +1044,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1003,9 +1055,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1013,9 +1066,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1023,9 +1077,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1033,9 +1088,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1043,9 +1099,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1053,9 +1110,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1063,9 +1121,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1073,9 +1132,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1103,9 +1163,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1113,9 +1174,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1123,9 +1185,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1133,9 +1196,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1143,9 +1207,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1153,9 +1218,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1163,9 +1229,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1173,9 +1240,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1183,9 +1251,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1193,9 +1262,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1203,9 +1273,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1213,9 +1284,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1223,9 +1295,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1233,9 +1306,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1243,9 +1317,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-14",
@@ -1363,9 +1438,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1373,9 +1449,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1383,9 +1460,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1393,9 +1471,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1403,9 +1482,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1413,9 +1493,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1423,9 +1504,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1433,9 +1515,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1443,9 +1526,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1453,9 +1537,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1463,9 +1548,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -1473,9 +1559,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-22",
@@ -1553,9 +1640,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1563,9 +1651,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1573,9 +1662,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1583,9 +1673,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1593,9 +1684,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1603,9 +1695,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1613,9 +1706,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1623,9 +1717,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1633,9 +1728,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1643,9 +1739,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1653,9 +1750,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -1663,9 +1761,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-26",
@@ -1737,7 +1836,7 @@
         },
         "b2BoxesSold": 360,
         "newOrders": 82,
-        "futureSalesVnd": 19722000
+        "futureSalesVnd": 19560000
       },
       {
         "id": "goal",
@@ -1769,9 +1868,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1779,9 +1879,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1789,9 +1890,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1799,9 +1901,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1809,9 +1912,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1819,9 +1923,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1829,9 +1934,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1839,9 +1945,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1849,9 +1956,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1859,9 +1967,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1869,9 +1978,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1879,9 +1989,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1889,9 +2000,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1899,9 +2011,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-11",
@@ -1909,9 +2022,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1939,9 +2053,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1949,9 +2064,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1959,9 +2075,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1969,9 +2086,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1979,9 +2097,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1989,9 +2108,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -1999,9 +2119,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2009,9 +2130,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2019,9 +2141,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2029,9 +2152,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2039,9 +2163,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2049,9 +2174,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2059,9 +2185,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2069,9 +2196,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-12",
@@ -2079,9 +2207,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-14",
@@ -2209,9 +2338,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2219,9 +2349,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2229,9 +2360,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2239,9 +2371,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2249,9 +2382,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2259,9 +2393,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2269,9 +2404,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2279,9 +2415,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2289,9 +2426,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2299,9 +2437,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2309,9 +2448,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2319,9 +2459,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2329,9 +2470,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2339,9 +2481,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-20",
@@ -2349,9 +2492,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-22",
@@ -2439,9 +2583,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2449,9 +2594,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2459,9 +2605,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2469,9 +2616,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2479,9 +2627,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2489,9 +2638,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2499,9 +2649,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2509,9 +2660,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2519,9 +2671,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2529,9 +2682,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2539,9 +2693,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-24",
@@ -2549,9 +2704,10 @@
             "type": "retail",
             "orders": 1,
             "boxes": 2,
-            "priceVnd": 57000,
-            "salesVnd": 114000,
-            "basis": "forecast"
+            "priceVnd": 55500,
+            "salesVnd": 111000,
+            "basis": "forecast",
+            "offer": "Combo 2 ngày sale"
           },
           {
             "date": "2026-11-26",
@@ -2633,7 +2789,7 @@
         },
         "b2BoxesSold": 400,
         "newOrders": 88,
-        "futureSalesVnd": 21876000
+        "futureSalesVnd": 21705000
       }
     ],
     "assumptions": {
@@ -2646,9 +2802,10 @@
       "contingencyRate": 0.1,
       "paidAdsVnd": 0,
       "paidKocVnd": 0,
-      "sampleUnits": 0
+      "sampleUnits": 0,
+      "saleCombo2TotalVnd": 111000
     },
-    "method": "Sỉ: số đối tác cần tiếp cận × tỷ lệ chốt 20% × 30 hộp. Lẻ: lượt tư vấn đủ nhu cầu × tỷ lệ chốt 25% × 2 hộp. Lịch sale phân bổ năng lực bán, không phải hệ số tăng trưởng đã kiểm chứng."
+    "method": "Sỉ: số đối tác cần tiếp cận × tỷ lệ chốt 20% × 30 hộp. Lẻ: lượt tư vấn đủ nhu cầu × tỷ lệ chốt 25% × 2 hộp. Lịch sale phân bổ năng lực bán, không phải hệ số tăng trưởng đã kiểm chứng. Đơn lẻ dự báo gồm 2 hộp: ngày sale dùng combo 111.000đ/đơn; ngày thường 2 × 63.000đ. Giá combo là điều kiện mô hình cần chốt trong bản nộp."
   },
   "commission": {
     "minimumKnownRevenueVnd": 1000000,
