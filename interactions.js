@@ -26,7 +26,7 @@ export function initDisplay(){
  const pane=document.querySelector('#chartInspector');pane.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const els=[...pane.querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(el=>!el.hidden);if(e.shiftKey&&document.activeElement===els[0]){e.preventDefault();els.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===els.at(-1)){e.preventDefault();els[0].focus()}});
 }
 export function enhanceCharts(onAction){
- const tip=document.querySelector('#tooltip');tip.hidden=true;
+ const tip=document.querySelector('#tooltip');tip.hidden=true;document.querySelectorAll('#content svg').forEach(svg=>svg.setAttribute('role','group'));
  document.querySelectorAll('#content svg rect,#content svg circle,#content svg polyline').forEach(el=>{
   const title=el.querySelector('title');const label=el.dataset.tip||title?.textContent;if(!label)return;
   el.dataset.tip=label;if(title)title.remove();el.classList.add('chart-hit');el.setAttribute('tabindex','0');el.setAttribute('role','button');el.setAttribute('aria-label',label+(el.dataset.action?' · Bấm để tương tác':' · Xem chi tiết'));
