@@ -1,4 +1,4 @@
-import {initDisplay,enhanceCharts,showInspector,closeInspector} from './interactions.js';
+import {initDisplay,enhanceCharts,showInspector,closeInspector} from './interactions.js?v=20261106-ombre4';
 import {planSummary} from './forecast-model.js';
 import {validateData,summarize,selectOrders,channelTotals,priceForOrder,shippingScenarios,estimateCommission,inventorySummary,forecastSummary,simulateOrders,actualCSV,known} from './model.js';
 const $=s=>document.querySelector(s), nf=new Intl.NumberFormat('vi-VN',{maximumFractionDigits:0});

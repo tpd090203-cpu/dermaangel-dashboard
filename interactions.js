@@ -12,11 +12,37 @@ export const themes=[
  {id:'burnt-sienna',name:'Burnt Sienna',color:'#ae6850',ink:'#7e4b3a'}
 ];
 let returnFocus=null;
-export function applyTheme(id){const t=themes.find(x=>x.id===id)||themes[0];document.documentElement.style.setProperty('--accent',t.color);document.documentElement.style.setProperty('--accent-ink',t.ink);document.documentElement.dataset.theme=t.id;try{localStorage.setItem('dnt-display-theme',t.id)}catch{}document.querySelectorAll('[data-theme-choice]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.themeChoice===t.id)));const title=document.querySelector('#themeName');if(title)title.textContent=t.name;}
+function mixColor(a,b,weight){
+ const rgb=hex=>hex.slice(1).match(/../g).map(value=>parseInt(value,16));
+ const left=rgb(a),right=rgb(b);
+ return '#'+left.map((value,i)=>Math.round(value*(1-weight)+right[i]*weight).toString(16).padStart(2,'0')).join('');
+}
+export function applyTheme(id){
+ const t=themes.find(x=>x.id===id)||themes[0],root=document.documentElement;
+ const tokens={
+  '--accent':t.color,'--accent-ink':t.ink,
+  '--nav-top':mixColor(t.ink,'#111923',.40),
+  '--nav-middle':mixColor(t.ink,'#111923',.20),
+  '--nav-bottom':mixColor(t.color,'#111923',.48),
+  '--nav-glow':mixColor(t.color,'#ffffff',.12),
+  '--nav-detail':mixColor(t.color,'#ffffff',.78),
+  '--nav-active':mixColor(t.color,'#ffffff',.55),
+  '--theme-soft':mixColor(t.color,'#fffefa',.91),
+  '--theme-wash':mixColor(t.color,'#f5f3ef',.85),
+  '--theme-line':mixColor(t.color,'#e8e7e2',.75),
+  '--theme-text':mixColor(t.ink,'#28343b',.40),
+  '--theme-muted':mixColor(t.ink,'#747c7e',.70)
+ };
+ Object.entries(tokens).forEach(([name,value])=>root.style.setProperty(name,value));
+ root.dataset.theme=t.id;
+ try{localStorage.setItem('dnt-display-theme',t.id)}catch{}
+ document.querySelectorAll('[data-theme-choice]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.themeChoice===t.id)));
+ const title=document.querySelector('#themeName');if(title)title.textContent=t.name;
+}
 export function closeInspector(){document.querySelector('#chartInspector').hidden=true;document.querySelector('#inspectorBackdrop').hidden=true;if(returnFocus?.isConnected)returnFocus.focus();}
 export function showInspector(title,html){returnFocus=document.activeElement;const pane=document.querySelector('#chartInspector');document.querySelector('#inspectorTitle').textContent=title;document.querySelector('#inspectorBody').innerHTML=html;pane.hidden=false;document.querySelector('#inspectorBackdrop').hidden=false;document.querySelector('#closeInspector').focus();}
 export function initDisplay(){
- const themePanel=document.querySelector('#themePanel');themePanel.innerHTML=`<strong>Bảng màu giao diện</strong><p>Sắc độ màn hình lấy cảm hứng từ bảng màu bạn chọn.</p><div class="theme-options">${themes.map(t=>`<button type="button" data-theme-choice="${t.id}" aria-label="${t.name}" aria-pressed="false" style="--swatch:${t.color}"><i></i>${t.name}<span>✓</span></button>`).join('')}</div><small>Nền Cloud Dancer · giữ nguyên số liệu khi đổi màu</small>`;
+ const themePanel=document.querySelector('#themePanel');themePanel.innerHTML=`<strong>Bảng màu giao diện</strong><p>Đồng bộ màu dashboard và thanh điều khiển.</p><div class="theme-options">${themes.map(t=>`<button type="button" data-theme-choice="${t.id}" aria-label="${t.name}" aria-pressed="false" style="--swatch:${t.color}"><i></i>${t.name}<span>✓</span></button>`).join('')}</div><small>Nền Cloud Dancer · Ombre theo tông màu đã chọn</small>`;
  let saved;try{saved=localStorage.getItem('dnt-display-theme')}catch{}applyTheme(saved||'alexandrite');
  document.querySelector('#themeToggle').onclick=()=>{themePanel.hidden=!themePanel.hidden;document.querySelector('#themeToggle').setAttribute('aria-expanded',String(!themePanel.hidden))};
  themePanel.addEventListener('click',e=>{const b=e.target.closest('[data-theme-choice]');if(b)applyTheme(b.dataset.themeChoice)});
